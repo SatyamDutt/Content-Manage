@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "405621987705",
+    "project_id": "content-manage-deed7",
+    "storage_bucket": "content-manage-deed7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405621987705:android:0c9f937f938c3074c2b7a8",
+        "android_client_info": {
+          "package_name": "com.example.content_manage"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdaj3B5pdCCPLFgRuNpc2TFvVTARlnU6Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
