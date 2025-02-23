@@ -1,5 +1,6 @@
 import 'package:content_manage/resources/app_dimension.dart';
 import 'package:content_manage/views/admin/admin_login_screen.dart';
+import 'package:content_manage/views/common/syllabus_screen.dart';
 import 'package:content_manage/views/common/test_screen.dart';
 import 'package:content_manage/views/student/student_login_screen.dart';
 import 'package:content_manage/views/student/student_register_screen.dart';
@@ -44,14 +45,14 @@ class GetStatartedScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => TestScreen(),
+                      builder: (context) => StudentLoginScreen(),
                     ),
                   );
                 },
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50)),
                 child: Text(
-                  'Proceed As Studend',
+                  'Proceed As Student',
                   style: TextStyle(
                     fontSize: 22,
                     color: Colors.white,

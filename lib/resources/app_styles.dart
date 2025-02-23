@@ -10,13 +10,15 @@ class AppStyles {
     fontWeight: FontWeight.w500,
   );
   static TextStyle mediumFont = TextStyle(
-    fontSize: AppDimension.px_14.sp,
-    color: AppColors.whiteColor,
-    fontWeight: FontWeight.w600
-  );
+      fontSize: AppDimension.px_14.sp,
+      color: AppColors.whiteColor,
+      fontWeight: FontWeight.w600);
   static TextStyle smallFont = TextStyle(
     fontSize: AppDimension.px_12.sp,
     color: AppColors.whiteColor,
     fontWeight: FontWeight.w700,
+  );
+  static TextStyle smallFontBlueColor = TextStyle(
+    fontSize: AppDimension.px_14.sp,
   );
 }

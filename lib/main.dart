@@ -28,14 +28,14 @@ void main() async {
     // MyApp()
   );
 
-    DocumentSnapshot snapshot = await FirebaseFirestore.instance
-        .collection("Teachers")
-        .doc('xdX7NCCZeec4IdUYBbrPJBsGIVa2')
-        .collection('9th')
-        .doc('OMlGSrRmumUgjLcNa5oC').collection('physics').doc('82ZCDSYua2ehyOgyRQQP')
-        .get();
+    // DocumentSnapshot snapshot = await FirebaseFirestore.instance
+    //     .collection("Teachers")
+    //     .doc('xdX7NCCZeec4IdUYBbrPJBsGIVa2')
+    //     .collection('9th')
+    //     .doc('OMlGSrRmumUgjLcNa5oC').collection('physics').doc('82ZCDSYua2ehyOgyRQQP')
+    //     .get();
 
-    print(snapshot.data().toString());
+    // print(snapshot.data().toString());
 
 
 }
@@ -54,7 +54,8 @@ class MyApp extends StatelessWidget {
           // builder: DevicePreview.appBuilder,
           debugShowCheckedModeBanner: false,
           // home: GetStatartedScreen(),
-          home: (FirebaseAuth.instance.currentUser !=null) ? AdminDashboardScreen(userId: FirebaseAuth.instance.currentUser!.uid,) : GetStatartedScreen(),
+          // home: (FirebaseAuth.instance.currentUser !=null) ? AdminDashboardScreen(userId: FirebaseAuth.instance.currentUser!.uid,) : GetStatartedScreen(),
+          home: (FirebaseAuth.instance.currentUser !=null) ? StudentHomeScreen(uid: FirebaseAuth.instance.currentUser!.uid,) : GetStatartedScreen(),
         );
       },
     );

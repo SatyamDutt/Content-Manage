@@ -9,6 +9,7 @@ class AppDimension {
   static const double px_400 = 400;
   static const double px_350 = 350;
   static const double px_40 = 40;
+  static const double px_45 = 45;
   static const double px_22 = 22;
   static const double px_32 = 32;
   static const double px_500 = 500;

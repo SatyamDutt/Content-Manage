@@ -42,12 +42,12 @@ class _StudentOtpVerifyScreenState extends State<StudentOtpVerifyScreen> {
           await FirebaseAuth.instance.signInWithCredential(credential);
 
       if (userCredential.user != null) {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => StudentHomeScreen(userId: '',),
-          ),
-        );
+        // Navigator.push(
+        //   context,
+        //   MaterialPageRoute(
+        //     builder: (context) => StudentHomeScreen(userId: '',),
+        //   ),
+        // );
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text('SuccessFully Logined'),

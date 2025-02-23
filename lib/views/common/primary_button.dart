@@ -11,7 +11,8 @@ class PrimaryButton extends StatelessWidget {
       width: double.maxFinite,
       height: 56,
       child: MaterialButton(
-        color: Colors.blue,
+        // color: Colors.blue,
+        color: Color(0xff1d2f47),
         onPressed: ontTap,
         shape:
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10),

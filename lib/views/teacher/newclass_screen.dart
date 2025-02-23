@@ -64,12 +64,12 @@ class _NewclassScreenState extends State<NewclassScreen> {
   //         "subjectName": subjectName,
   //         "teacherName": teacherName,
   //       });
-  //       ScaffoldMessenger.of(context).showSnackBar(
-  //         SnackBar(
-  //           content: Text('New Class Started'),
-  //           backgroundColor: AppColors.greenColor,
-  //         ),
-  //       );
+        // ScaffoldMessenger.of(context).showSnackBar(
+        //   SnackBar(
+        //     content: Text('New Class Started'),
+        //     backgroundColor: AppColors.greenColor,
+        //   ),
+        // );
   //       Navigator.pop(context);
   //     } catch (e) {
   //       print('Error to Start new class ${e}');
@@ -149,6 +149,8 @@ class _NewclassScreenState extends State<NewclassScreen> {
 } catch (e) {
     print("Error: $e");
 }
+
+
 }
 
   @override

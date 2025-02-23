@@ -38,9 +38,11 @@ class _TeacherRegisterScreenState extends State<TeacherRegisterScreen> {
     if (email.isEmpty ||
         password.isEmpty ||
         name.isEmpty ||
-        phone.isEmpty ||
-        organizationName.isEmpty ||
-        subject.isEmpty) {
+        phone.isEmpty 
+        // organizationName.isEmpty 
+        // ||
+        // subject.isEmpty
+        ) {
       print('Please fill all the details');
     } else {
       try {
@@ -72,8 +74,8 @@ class _TeacherRegisterScreenState extends State<TeacherRegisterScreen> {
     Map<String, dynamic> newUserData = {
       "name": name,
       "phone": phone,
-      "organization Name": organizationName,
-      "subject": subject,
+      // "organization Name": organizationName,
+      // "subject": subject,
       "email": email,
     };
 
@@ -117,26 +119,26 @@ class _TeacherRegisterScreenState extends State<TeacherRegisterScreen> {
                 PrimaryTextfield(
                   inputValue: phoneController,
                   hintText: AppStrings.defaultNumber),
-                SizedBox(
-                  height: AppDimension.px_10,
-                ),
-                InputLabel(title: AppStrings.organizationName),
-                SizedBox(
-                  height: AppDimension.px_6,
-                ),
-                PrimaryTextfield(
-                  inputValue: organizationNameController,
-                  hintText: AppStrings.dpsSchool),
-                SizedBox(
-                  height: AppDimension.px_10,
-                ),
-                InputLabel(title: AppStrings.subjectName),
-                SizedBox(
-                  height: AppDimension.px_6,
-                ),
-                PrimaryTextfield(
-                  inputValue: subjectController,
-                  hintText: AppStrings.physics),
+                // SizedBox(
+                //   height: AppDimension.px_10,
+                // ),
+                // InputLabel(title: AppStrings.organizationName),
+                // SizedBox(
+                //   height: AppDimension.px_6,
+                // ),
+                // PrimaryTextfield(
+                //   inputValue: organizationNameController,
+                //   hintText: AppStrings.dpsSchool),
+                // SizedBox(
+                //   height: AppDimension.px_10,
+                // ),
+                // InputLabel(title: AppStrings.subjectName),
+                // SizedBox(
+                //   height: AppDimension.px_6,
+                // ),
+                // PrimaryTextfield(
+                //   inputValue: subjectController,
+                //   hintText: AppStrings.physics),
                 SizedBox(
                   height: AppDimension.px_10,
                 ),

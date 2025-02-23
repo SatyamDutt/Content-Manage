@@ -1,17 +1,53 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:content_manage/resources/app_colors.dart';
 import 'package:content_manage/resources/app_dimension.dart';
 import 'package:content_manage/resources/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-class StudentNotificationDetailsScreen extends StatelessWidget {
+class StudentNotificationDetailsScreen extends StatefulWidget {
   final String title;
-  final DateTime date;
+  final String NoticeDetail;
+  // final DateTime date;
+  const StudentNotificationDetailsScreen({
+    super.key,
+    required this.title,
+    // required this.date,
+    required this.NoticeDetail,
+  });
 
-   StudentNotificationDetailsScreen({super.key,
-   required this.title,
-   required this.date,
-   });
+  @override
+  State<StudentNotificationDetailsScreen> createState() =>
+      _StudentNotificationDetailsScreenState();
+}
+
+class _StudentNotificationDetailsScreenState
+    extends State<StudentNotificationDetailsScreen> {
+  String noticeTitle = "";
+  String noticeDetails = "";
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    fetchNotices();
+  }
+
+  void fetchNotices() async {
+    DocumentSnapshot snapshot = await FirebaseFirestore.instance
+        .collection('Students')
+        .doc('4626')
+        .collection('Notices')
+        .doc('8YGQpyujtt1wmQjx1Tv2')
+        .get();
+
+    print(snapshot.data().toString());
+
+    setState(() {
+      noticeTitle = snapshot['Notice Title'] ?? '';
+      noticeDetails = snapshot['Notice Details'] ?? '';
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +89,8 @@ class StudentNotificationDetailsScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          title,
+                          '${widget.title}',
+                          // widget.title,
                           style: TextStyle(
                             color: AppColors.whiteColor,
                             fontSize: AppDimension.px_20,
@@ -61,7 +98,7 @@ class StudentNotificationDetailsScreen extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          '${DateFormat('dd-MM-yyyy').format(date)}',
+                          '${DateFormat('dd-MM-yyyy').format(DateTime.now())}',
                           // '${DateFormat('dd MMMM yyyy').format(DateTime(2025, 01, 05))}',
                           style: TextStyle(
                             color: AppColors.whiteColor,
@@ -79,10 +116,12 @@ class StudentNotificationDetailsScreen extends StatelessWidget {
                       height: AppDimension.px_5,
                     ),
                     Text(
-                      AppStrings.NoticeDetails,
+                      '${widget.NoticeDetail}',
+                      // AppStrings.NoticeDetails,
                       textAlign: TextAlign.justify,
-                      overflow: TextOverflow.clip,
-                      textWidthBasis: TextWidthBasis.longestLine,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 7,
+                      // textWidthBasis: TextWidthBasis.longestLine,
                       style: TextStyle(
                         color: AppColors.whiteColor,
                         fontSize: AppDimension.px_16,

@@ -1,18 +1,15 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:content_manage/resources/app_colors.dart';
 import 'package:content_manage/resources/app_dimension.dart';
 import 'package:flutter/material.dart';
 
-class StudentCallScreen extends StatefulWidget {
-  const StudentCallScreen({super.key});
+class TeacherCallScreen extends StatefulWidget {
+  const TeacherCallScreen({super.key});
 
   @override
-  State<StudentCallScreen> createState() => _StudentCallScreenState();
+  State<TeacherCallScreen> createState() => _TeacherCallScreenState();
 }
 
-class _StudentCallScreenState extends State<StudentCallScreen> {
- 
-
+class _TeacherCallScreenState extends State<TeacherCallScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,6 +52,6 @@ class _StudentCallScreenState extends State<StudentCallScreen> {
         ),
       ),
     );
+  
   }
 }
-

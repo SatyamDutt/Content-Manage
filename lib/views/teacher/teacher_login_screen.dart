@@ -59,37 +59,38 @@ class _TeacherLoginScreenState extends State<TeacherLoginScreen> {
           SizedBox(
             height: AppDimension.px_40.h,
           ),
-          Padding(
-              padding: EdgeInsets.symmetric(horizontal: AppDimension.px_25.w),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  MaterialButton(
-                    color: AppColors.blueColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(AppDimension.px_10.r),
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              AdminDashboardScreen(userId: 'userId'),
-                        ),
-                      );
-                    },
-                    child: Text(
-                      "Skip",
-                      style: TextStyle(
-                        color: AppColors.whiteColor,
-                        fontSize: AppDimension.px_14.sp,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            ),
+          // Padding(
+          //     padding: EdgeInsets.symmetric(horizontal: AppDimension.px_25.w),
+          //     child: Row(
+          //       mainAxisAlignment: MainAxisAlignment.end,
+          //       children: [
+          //         MaterialButton(
+          //           color: AppColors.blueColor,
+          //           shape: RoundedRectangleBorder(
+          //             borderRadius: BorderRadius.circular(AppDimension.px_10.r),
+          //           ),
+          //           onPressed: () {
+          //             Navigator.push(
+          //               context,
+          //               MaterialPageRoute(
+          //                 builder: (context) =>
+          //                     AdminDashboardScreen(userId: 'userId'),
+          //               ),
+          //             );
+          //           },
+          //           child: Text(
+          //             "Skip",
+          //             style: TextStyle(
+          //               color: AppColors.whiteColor,
+          //               fontSize: AppDimension.px_14.sp,
+          //               fontWeight: FontWeight.w600,
+          //             ),
+          //           ),
+          //         )
+          //       ],
+          //     ),
+          //   ),
+            
             SizedBox(
               height: AppDimension.px_10.h,
             ),
